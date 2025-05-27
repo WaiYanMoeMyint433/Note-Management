@@ -1,0 +1,44 @@
+.note-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.note-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.note-content {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.note-meta {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.note-meta span {
+    font-weight: bold;
+    color: #666;
+}
+
+.pinned {
+    color: #d4a017;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#note{
+    background-color: #80b4e5;
+}

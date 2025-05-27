@@ -1,0 +1,434 @@
+:root {
+    --primary-color: #6B48FF;
+    --secondary-color: #f9f9f9;
+    --accent-color: #8F74FF;
+    --text-color: #333;
+    --light-text: #718096;
+    --border-color: #e2e8f0;
+    --hover-color: #F0EBFF;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-link {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 5rem 0;
+    background: white;
+    text-align: center;
+}
+
+.hero-title {
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    color: var(--light-text);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+/* Feature Cards */
+.features-section {
+    padding: 5rem 0;
+    background: var(--secondary-color);
+}
+
+.section-title {
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: none;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-title {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.feature-text {
+    color: var(--light-text);
+}
+
+/* Team Section */
+.team-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.team-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: none;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-wrapper {
+    overflow: hidden;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.team-card .card-body {
+    padding: 1.5rem;
+}
+
+.team-card .card-title {
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.team-card .card-text {
+    color: var(--light-text);
+}
+
+.social-links a {
+    color: var(--light-text);
+    transition: var(--transition);
+    margin: 0 0.5rem;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Buttons */
+.btn-purple {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.btn-purple:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(107, 72, 255, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    color: var(--light-text);
+    padding: 3rem 0;
+}
+
+.footer-heading {
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    color: var(--text-color);
+}
+
+.footer-link {
+    color: var(--light-text);
+    transition: var(--transition);
+    display: block;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+}
+
+/* Note Card Styles */
+.note-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: none;
+    height: 100%;
+}
+
+.note-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.note-title {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.note-content {
+    color: var(--light-text);
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.note-date {
+    font-size: 0.875rem;
+    color: var(--light-text);
+}
+
+.note-labels {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.75rem;
+}
+
+.note-label {
+    background-color: #F0EBFF;
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.note-actions {
+    margin-top: 1rem;
+}
+
+.action-btn {
+    font-size: 0.875rem;
+    margin-right: 0.5rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.btn-edit {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-delete {
+    background-color: #ff4757;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #ff6b81;
+    color: white;
+}
+
+.btn-pin {
+    background-color: #f1f2f6;
+    color: var(--text-color);
+}
+
+.btn-pin:hover {
+    background-color: #dfe4ea;
+}
+
+.btn-lock {
+    background-color: #2ed573;
+    color: white;
+}
+
+.btn-lock:hover {
+    background-color: #7bed9f;
+    color: white;
+}
+
+/* Status icons */
+.status-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+}
+
+.status-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    margin-left: 5px;
+    background-color: #F0EBFF;
+    border-radius: 50%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    height: 100vh;
+    position: fixed;
+    padding: 2rem 1rem;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.sidebar-item:hover {
+    background-color: var(--hover-color);
+}
+
+.sidebar-item.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.sidebar-item.active i {
+    color: white;
+}
+
+.sidebar-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--primary-color);
+    margin-right: 0.75rem;
+}
+
+/* Form Styles */
+.form-control {
+    border-radius: 8px;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(107, 72, 255, 0.25);
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 12px;
+    border: none;
+    box-shadow: var(--shadow);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem;
+}
+
+.modal-title {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+    padding: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        z-index: 1030;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .feature-card,
+    .team-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.hidden {
+    display: none;
+}   
+
+.show{
+    display: block;
+}

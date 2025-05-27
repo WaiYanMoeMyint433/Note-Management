@@ -1,0 +1,153 @@
+/* modal-note.css - Styles for modal-based notes */
+
+/* Modal Structure */
+#noteModal {
+  transition: opacity 0.2s ease;
+}
+
+#noteModal.hidden {
+  display: none;
+}
+
+#noteModalContent {
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+#noteModal:not(.hidden) #noteModalContent {
+  transform: translateY(0);
+}
+
+/* Auto-save Status Styling */
+#modalSaveStatus {
+  transition: color 0.3s ease;
+}
+
+#modalSaveStatus.animate-pulse {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* Note Card Styling for clickability */
+.note-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Prevent buttons from triggering card click */
+.note-actions button {
+  position: relative;
+  z-index: 10;
+}
+
+/* Body overflow control when modal open */
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+/* Image styling in editor */
+.ql-editor img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+/* Better label appearance */
+#modalLabelContainer span {
+  transition: background-color 0.2s ease;
+}
+
+#modalLabelContainer span:hover {
+  background-color: rgba(147, 51, 234, 0.2);
+}
+
+/* Quill editor min height in modal */
+#modal-editor-container {
+  min-height: 200px;
+}
+
+/* Make sure the modal is properly layered */
+.fixed {
+  position: fixed;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Improve modal scrolling on mobile */
+.max-h-\[90vh\] {
+  max-height: 90vh;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+/* Add an image placeholder in the editor when empty */
+.ql-editor.ql-blank::before {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.6);
+  content: attr(data-placeholder);
+}
+
+
+/* Dark mode additions for modal-note.css */
+#noteModal {
+    background-color: var(--color-overlay);
+}
+
+#noteModalContent {
+    background-color: var(--color-modal-bg);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+}
+
+#modalSaveStatus {
+    color: var(--color-text-secondary);
+}
+
+#modalLabelContainer span {
+    background-color: rgba(147, 51, 234, 0.1);
+    color: var(--color-text-primary);
+}
+
+#modal-editor-container {
+    background-color: var(--color-input-bg);
+    color: var(--color-input-text);
+    border-color: var(--color-border);
+}
+
+.dark-theme #modalLabelContainer span {
+    background-color: rgba(147, 51, 234, 0.2);
+    color: var(--text-color-heading);
+}
+
+.dark-theme #modalNoteTitle,
+.dark-theme #modalLabelInput {
+    background-color: var(--color-input-bg);
+    color: var(--color-input-text);
+    border-color: var(--color-border);
+}
+
+.dark-theme .ql-editor.ql-blank::before {
+    color: var(--color-text-secondary);
+    opacity: 0.6;
+}
